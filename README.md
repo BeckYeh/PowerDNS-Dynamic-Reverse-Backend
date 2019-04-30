@@ -5,19 +5,20 @@ forward lookup.
 
 ## Prerequisites
 
-* Python 2.7 or 3
+* Python 3
 * Python modules: `netaddr`, `py-radix`, `ipy`, `pyyaml`
 
 ## Setup
 
-1. Copy script to e.g. `/usr/local/sbin/pipe-local-ipv6-wrapper`, make sure to chmod executable
-2. Copy and edit `dynrev.yml` with your zones
-3. Edit `pdns.conf`:
+1. Copy script to e.g. `/usr/local/sbin/pipe-powerdns-dynamic-reverse-backend`, make sure to chmod executable
+2. Copy and edit `dynrev.yaml` with your zones
+3. mkdir `/var/log/powerdns-dynamic-reverse-backend` and make sure pdns can rw this folder
+4. Edit `pdns.conf`:
 
 ```
 launch=pipe
-pipe-command=/usr/local/sbin/pipe-local-ipv6-wrapper /etc/powerdns/dynrev.yml
-pipe-timeout=500
+pipe-command=/usr/local/sbin/pipe-powerdns-dynamic-reverse-backend /etc/pdns/dynrev.yaml
+pipe-timeout=5000
 ```
 
 # LICENSE
@@ -31,6 +32,8 @@ Copyright (c) 2010 Stefan "ZaphodB" Schmidt
 Copyright (c) 2011 Endre Szabo
 
 Copyright (c) 2017 Technical University of Munich (Lukas Erlacher)
+
+Copyright (c) 2019 Beck Yeh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

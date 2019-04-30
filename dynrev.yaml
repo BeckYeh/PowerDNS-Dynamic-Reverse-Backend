@@ -6,11 +6,35 @@ defaults:
     - dns1.g-dns.com
     - dns2.g-dns.com
 prefixes:
+  '113.196.112.0/23':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
+  '122.147.181.0/24':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
+  '122.147.182.0/24':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
+  '122.147.183.0/24':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
   '103.1.220.0/22':
     forward: 'static.ip.net.tw'
     ttl: 300
     subnet: 24
   '103.17.8.0/22':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
+  '103.129.168.0/22':
+    forward: 'static.ip.net.tw'
+    ttl: 300
+    subnet: 24
+  '103.123.240.0/22':
     forward: 'static.ip.net.tw'
     ttl: 300
     subnet: 24
